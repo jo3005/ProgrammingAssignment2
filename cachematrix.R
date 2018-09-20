@@ -33,7 +33,7 @@ cacheSolve <- function(mat, ...) {
     message("getting cached data")  ## identify that you have a cached value and will retrieve it
     return(inv)
   }
-  else { 
+  else {      ## don't have a cached value so calculate the inverse
     data <- mat$getmat()    
     inv <- solve(data, ...)
     mat$setinv(inv)
